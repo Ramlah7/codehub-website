@@ -16,7 +16,7 @@ class User(AbstractUser):
     role = models.CharField(max_length=10, choices=UserRole.choices)
 
     username = models.CharField(max_length=150, unique=True)
-    REQUIRED_FIELDS = ['email', 'first_name', 'last_name']
+    REQUIRED_FIELDS = ['email', 'first_name', 'last_name', 'role']
     USERNAME_FIELD = 'username'
 
 
